@@ -343,25 +343,6 @@
     { id: "disco-toc" }
   );
 
-  api.cleanupStream(() => {
-    $(window).off("scroll.d-toc");
-    $("#main").off("click.toggleDtoc");
-    $(".d-toc-timeline").removeClass("d-toc-timeline d-toc-timeline-visible");
-  });
-
-  api.onAppEvent("topic:current-post-changed", post => {
-    if (!$(".d-toc-timeline").length) return;
-    run.scheduleOnce("afterRender", () => {
-      if (post.post.post_number <= 2) {
-        $("body").removeClass("d-toc-timeline-visible");
-        $(".d-toc-toggle").fadeIn(100);
-      } else {
-        $("body").addClass("d-toc-timeline-visible");
-        $(".d-toc-toggle").fadeOut(100);
-      }
-    });
-  });
-
   if (currUserTrustLevel >= minimumTrustLevel) {
     if (!I18n.translations[I18n.currentLocale()].js.composer) {
       I18n.translations[I18n.currentLocale()].js.composer = {};
