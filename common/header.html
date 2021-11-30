@@ -257,6 +257,8 @@
               );
             });
         });
+        
+        body.append(`<span id="bottom-anchor" class="d-toc-igonore"></span>`);
 
         let dTocHeadingSelectors = "h1,h2,h3,h4,h5,h6";
         if (!body.has(">h1").length) {
@@ -306,11 +308,6 @@
           .addClass("d-toc-article")
           .append(
             `<div class="d-toc-main">
-                  <div class="post-bottom-wrapper dekstop">
-                    <a href="#bottom-anchor" title="${I18n.t(
-                      themePrefix("post_bottom_tooltip")
-                    )}">${iconHTML("downward")}</a>
-                    </div>
                     <ul id="d-toc">
                           <div class="d-toc-close-wrapper mobile">
                             <div class="post-bottom-wrapper">
