@@ -299,7 +299,7 @@
           .addClass("d-toc-cooked")
           .prepend(
             `<span class="d-toc-toggle">
-                      ${dtocIcon} ${I18n.t(themePrefix("table_of_contents"))}
+                      ${dtocIcon} <span class="toc-text">${I18n.t(themePrefix("table_of_contents"))}</span>
                       </span>`
           )
           .parents(".regular")
