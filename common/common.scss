@@ -141,7 +141,8 @@
   }
   .d-toc-toggle {
     position: fixed;
-    bottom: 5px;
+    bottom: 10px;
+    right: 10px;
     cursor: pointer;
     border-radius: 10px;
     padding: 0.5em 1em;
@@ -149,9 +150,9 @@
     color: var(--secondary);
     z-index: 3;
     margin-bottom: env(safe-area-inset-bottom);
-    right: 16px;
     .mobile-view & {
-      right: 10px;
+      left: 10px;
+      right: auto;
       border-radius: 4px;
       span.toc-text {
         display: none;
