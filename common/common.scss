@@ -30,12 +30,7 @@
       &.d-toc-active {
         position: relative;
         &:before {
-          :not(.rtl) & {
-            border-left: 1px solid var(--tertiary);
-          }
-          .rtl & {
-            border-right: 1px solid var(--tertiary);
-          }
+          border-left: 1px solid var(--tertiary);
           height: 100%;
           content: "";
           width: 1px;
@@ -50,80 +45,30 @@
       }
     }
     .d-toc-heading {
-      :not(.rtl) & {
-        padding-left: 10px;
-      }
-      .rtl & {
-        padding-right: 10px;
-      }
+      padding-left: 10px;
       .d-toc-active:before {
-        :not(.rtl) & {
-          left: -10px;
-        }
-        .rtl & {
-          right: -10px;
-        }
+        left: -10px;
       }
     }
     .d-toc-subheading {
-      :not(.rtl) & {
-        padding-left: 20px;
-      }
-      .rtl & {
-        padding-right: 20px;
-      }
+      padding-left: 20px;
       .d-toc-active:before {
-        :not(.rtl) & {
-          left: -30px;
-        }
-        .rtl & {
-          right: -30px;
-        }
+        left: -30px;
       }
       .d-toc-subheading {
-        :not(.rtl) & {
-          padding-left: 30px;
-        }
-        .rtl & {
-          padding-right: 30px;
-        }
+        padding-left: 30px;
         .d-toc-active:before {
-          :not(.rtl) & {
-            left: -60px;
-          }
-          .rtl & {
-            right: -60px;
-          }
+          left: -60px;
         }
         .d-toc-subheading {
-          :not(.rtl) & {
-            padding-left: 40px;
-          }
-          .rtl & {
-            padding-right: 40px;
-          }
+          padding-left: 40px;
           .d-toc-active:before {
-            :not(.rtl) & {
-              left: -70px;
-            }
-            .rtl & {
-              right: -70px;
-            }
+            left: -70px;
           }
           .d-toc-subheading {
-            :not(.rtl) & {
-              padding-left: 50px;
-            }
-            .rtl & {
-              padding-right: 50px;
-            }
+            padding-left: 50px;
             .d-toc-active:before {
-              :not(.rtl) & {
-                left: -80px;
-              }
-              .rtl & {
-                right: -80px;
-              }
+              left: -80px;
             }
           }
         }
@@ -168,24 +113,14 @@
     transition: transform 0.5s, opacity 0.25s;
     transform: translatex(100%);
     opacity: 0;
-    :not(.rtl) & {
-      margin-left: -1px;
-    }
-    .rtl & {
-      margin-right: -1px;
-    }
+    margin-left: -1px;
     &.d-toc-mobile {
       transform: translatex(0);
       opacity: 1;
     }
     .d-toc-active {
       &:before {
-        :not(.rtl) & {
-          margin-left: -1px;
-        }
-        .rtl & {
-          margin-right: -1px;
-        }
+        margin-left: -1px;
       }
     }
   }
@@ -214,28 +149,22 @@
     color: var(--secondary);
     z-index: 3;
     margin-bottom: env(safe-area-inset-bottom);
-    :not(.rtl) & {
-      right: 16px;
+    right: 16px;
+    .mobile-view & {
+      right: auto;
+      left: 0;
     }
-    .rtl & {
-      left: 16px;
-    }
+    
     body.footer-nav-visible & {
       bottom: 49px;
     }
   }
   #d-toc > ul {
-    :not(.rtl) & {
-      margin-left: 20px;
-      border-left: 1px solid var(--primary-low);
-    }
-    .rtl & {
-      margin-right: 20px;
-      border-right: 1px solid var(--primary-low);
-    }
-    &:last-child {
-      margin-bottom: 5em;
-    }
+    margin-left: 20px;
+    border-left: 1px solid var(--primary-low);
+  }
+  &:last-child {
+    margin-bottom: 5em;
   }
 }
 
