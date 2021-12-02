@@ -153,6 +153,9 @@
     .mobile-view & {
       right: auto;
       left: 0;
+      span.toc-text {
+        display: none;
+      }
     }
     
     body.footer-nav-visible & {
